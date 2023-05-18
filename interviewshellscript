@@ -1,0 +1,88 @@
+$sar
+
+write a simple shell script to list all processes
+
+ps -ef
+ps -ef | awk -F" " 'print{$2}'
+ 
+write a script to print only error from a remote log
+
+curl <url> | grep error
+
+write a shell script to print number divided by 3 & 5 and not 15?
+
+print even numbers --> divisible by 2
+
+print odd numbers --> not divisible by 2
+
+print numbers divisible by 3
+
+print prime numbers
+
+#!/bin/bash
+
+for i in {1..100}; do
+if ([ `expr $i %3` == 0 ] || [ `expr $i %5` == 0 ]) && [`expr $i % 15` !=0];
+then
+    echo $i
+fi
+
+
+Write a script to print number of "S" in mississippi
+
+#!/bin/bash
+
+x=mississippi
+
+grep -o "s" <<<"$x" | wc -l
+
+
+How will you debug the shell script?
+
+set -x
+
+what is crontab in linux? 
+
+automatically run the file at particular time
+
+How to open a read-only file?
+
+vim -r filename
+
+what is the difference between soft and hard link?
+
+Hard link: A hard link always points a filename to data on a storage device. ie copying or mirroring the file called hard link ie ln command
+
+Soft link: A softlink always points a filename to another filename, which then points to information on a storage device.
+ie: take non-executable file: python3 --> python
+                                ./python 
+                                
+what is diff between break and continue statement?
+ 
+Break - Breaking the execution
+
+Continue- continuing the execution (SKIP) --> skip this and continue the statement.
+
+What are the different types of loops?
+
+Is bash dynamic or statically typed and why?
+
+python, shell are dynamically typed
+
+var x string are static
+
+Explain about a network troubleshooting utility?
+
+traceroute google.com
+tracepath 
+
+How will you sort list of names in a file?
+
+sort command
+
+How will you manage logs of a system that generate huge log files everyday?
+Linux admin
+
+Applicatons - logs (realtime) 1000000logs
+
+Logrotate (gzip, zip)
